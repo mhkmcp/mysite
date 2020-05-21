@@ -1,0 +1,23 @@
+{% extends "admin/base.html" %}
+
+{% block title %}{{ title }} | {{username}}{% endblock %}
+{% block extrastyle %}
+<style>
+    #header {
+        background-color: #058BCC;
+    }
+    #site-name > a {
+        color: #222eee;
+    }
+
+</style>
+{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">Polls Administration {% if request.user.is_authenticated %}- @{{request.user.username}}{% endif %}</a></h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
+
+
+<!--source link: https://github.com/django/django/tree/master/django/contrib/admin/templates/admin-->
