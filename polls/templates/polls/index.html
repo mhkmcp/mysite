@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'polls/style.css' %}">
 </head>
 <body>
+
+<img src="{% static 'images/background.jpeg' %}" alt="My image">
 
 {% if latest_question_list %}
     <ul>
